@@ -11,23 +11,30 @@
 <body>
     <div align="center">HERO</div>
     <form action="index.php" method="post">
-        <label for="">point d'expérience</label>
-        <input type="text" placeholder="commence à 10 points" name="experience">
-        <label for="">point de vie</label>
-        <input type="text" placeholder="commence à 10 points" name="vie">
-        <label for="">point de force</label>
-        <input type="text" placeholder="commence à 2 points (1+1arme)" name="experience">
-        <label for="">point d'endurence</label>
-        <input type="text" placeholder="commence à 1 points" name="experience">
-        <label for="">sac d'armes</label>
-        <input type="text" placeholder="commence à 1 arme" name="experience">
-        <label for="">sous</label>
-        <input type="text" placeholder="commence à 20 €" name="experience">
-
+        <div class="form-floating col-2">
+            <input type="texte" class="form-control" id="experience" placeholder="commence à 10 points" name="experience">
+            <label for="floatingInput">Point d'expérience</label>
+        </div>
+        <div class="form-floating col-2">
+            <input type="texte" class="form-control" id="vie" placeholder="commence à 10 points" name="vie">
+            <label for="floatingInput">Point de vie</label>
+        </div>
+        <div class="form-floating col-2">
+            <input type="texte" class="form-control" id="force" placeholder="commence à 1 points (2 si arme)" name="force">
+            <label for="floatingInput">Point de force</label>
+        </div>   
+        <div class="form-floating col-2">
+            <input type="texte" class="form-control" id="endurance" placeholder="commence à 10 points" name="endurance">
+            <label for="floatingInput">Point d'endurance</label>
+        </div>
+        <div class="form-floating col-2">
+            <input type="texte" class="form-control" id="arme" placeholder="commence à 1 arme" name="arme">
+            <label for="floatingInput">Sac d'armes</label>
+        </div>
+        <div class="form-floating col-2">
+            <input type="texte" class="form-control" id="sous" placeholder="commence à 20€" name="sous">
+            <label for="floatingInput">Sous</label>
+        </div>
     </form>
-    <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Email address</label>
-    </div>
 </body>
 </html>
