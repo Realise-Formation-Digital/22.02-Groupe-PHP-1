@@ -4,8 +4,9 @@ $game = null;
 
 if (isset($_POST["start"])) {
 
-    $start = $_POST["start"];
+    //$start = $_POST["start"];
     echo "ciao";
+    $exp = $_POST["experience"];
     //$game = new Game();
 }
 
