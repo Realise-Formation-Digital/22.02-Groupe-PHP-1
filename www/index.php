@@ -1,3 +1,7 @@
+<?php
+include ('monstre.php');
+include ('marchant.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
