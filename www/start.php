@@ -1,10 +1,7 @@
 <?php 
 
       include "isset.php";
-    /*include "hero.php";
-      include "marchant.php";
-      include "monstre.php";
-    */
+    
 ?>
 
 <!DOCTYPE html>
@@ -18,52 +15,84 @@
 
 </head>
 <body>
-    <div align="center">
-        HERO
+    <div class="row">
+        <div class="col-2">
+            <div class="ps-5 ">
+             HERO
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="ps-5">
+            MONSTRE
+            </div>
+        </div>
     </div>
-    <form action="start.php" method="POST">
-        <div class="form-floating col-2">
-            <input type="texte" class="form-control" id="experience" placeholder="commence à 10 points" name="experience" valeur="rrrrr">
+    
+    <form class="row" action="start.php" method="POST">
+        <div class="col-2">
+
+        
+        <div class="form-floating ">
+            <input type="texte" class="form-control" id="experience" placeholder="commence à 10 points" name="experience" disabled value="<?php echo 'ciao' ?>">
             <label for="floatingInput">Point d'expérience</label>
         </div>
-        <div class="form-floating col-2">
-            <input type="texte" class="form-control" id="vie" placeholder="commence à 10 points" name="vie">
+        <div class="form-floating ">
+            <input type="texte" class="form-control" id="vie" placeholder="commence à 10 points" name="vie" disabled value="<?php echo 'ciao vie' ?>">
             <label for="floatingInput">Point de vie</label>
         </div>
-        <div class="form-floating col-2">
-            <input type="texte" class="form-control" id="force" placeholder="commence à 1 points (2 si arme)" name="force">
+        <div class="form-floating ">
+            <input type="texte" class="form-control" id="force" placeholder="commence à 1 points (2 si arme)" name="force" disabled value="<?php echo 'ciao force' ?>">
             <label for="floatingInput">Point de force</label>
         </div>   
-        <div class="form-floating col-2">
-            <input type="texte" class="form-control" id="endurance" placeholder="commence à 10 points" name="endurance">
+        <div class="form-floating ">
+            <input type="texte" class="form-control" id="endurance" placeholder="commence à 10 points" name="endurance" disabled value="<?php echo 'ciao endu' ?>">
             <label for="floatingInput">Point d'endurance</label>
         </div>
-        <div class="form-floating col-2">
-            <input type="texte" class="form-control" id="arme" placeholder="commence à 1 arme" name="arme">
+        <div class="form-floating ">
+            <input type="texte" class="form-control" id="arme" placeholder="commence à 1 arme" name="arme" disabled value="<?php echo 'ciao arme' ?>">
             <label for="floatingInput">Armes</label>
         </div>
-        <fieldset disabled>
-            <div class="form-floating col-2">
-                <label for="disabledTextInput" class="form-label text-muted">Arme 1000</label>
-                <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
-            </div>
-            <div class="form-floating col-2">
-                <label for="disabledTextInput" class="form-label text-muted">Arme 2000</label>
-                <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
-            </div>
-            <div class="form-floating col-2">
-                <label for="disabledTextInput" class="form-label text-muted">Arme 3000</label>
-                <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
-            </div>
-        </fieldset>
-        <div class="form-floating col-2">
-            <input type="texte" class="form-control" id="sous" placeholder="commence à 20€" name="sous">
+        <div class="form-floating ">
+            <input type="texte" class="form-control" id="sous" placeholder="commence à 20€" name="sous" disabled value="<?php echo 'ciao sous' ?>">
             <label for="floatingInput">Sous</label>
         </div>
-        <button type="submit" class="col-2 btn btn btn-outline-primary btn-lg" name="start">
-            Atatak
-        </button>
-
+                <button type="submit" class=" btn btn btn-outline-primary btn-lg" name="attaque">
+                    Atatak
+                </button>
+                <button type="submit" class=" btn btn btn-outline-primary btn-lg" name="fuire">
+                    Fuire
+                </button>
+        </div>
+        
+    <!--monstre-->
+    <div class="col-2">
+    <div class="form-floating ">
+            <input type="texte" class="form-control" id="experience" placeholder="commence à 10 points" name="experience" disabled value="<?php echo 'ciao' ?>">
+            <label for="floatingInput">Point d'expérience monstre</label>
+        </div>
+        <div class="form-floating ">
+            <input type="texte" class="form-control" id="vie" placeholder="commence à 10 points" name="vie" disabled value="<?php echo 'ciao vie' ?>">
+            <label for="floatingInput">Point de force</label>
+        </div>
+        <div class="form-floating">
+            <input type="texte" class="form-control" id="force" placeholder="commence à 1 points (2 si arme)" name="force" disabled value="<?php echo 'ciao force' ?>">
+            <label for="floatingInput">Point de force arme</label>
+        </div>   
+        <div class="form-floating">
+            <input type="texte" class="form-control" id="endurance" placeholder="commence à 10 points" name="endurance" disabled value="<?php echo 'ciao endu' ?>">
+            <label for="floatingInput">Point d'endurance</label>
+        </div>
+        <div class="form-floating">
+            <input type="texte" class="form-control" id="arme" placeholder="commence à 1 arme" name="arme" disabled value="<?php echo 'ciao arme' ?>">
+            <label for="floatingInput">Point d'endurance arme</label>
+        </div>
+        <div class="form-floating">
+            <input type="texte" class="form-control" id="sous" placeholder="commence à 20€" name="sous" disabled value="<?php echo 'ciao sous' ?>">
+            <label for="floatingInput">Monstre sous </label>
+        </div>
+       
+    </div>
+   
     </form>
     
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
