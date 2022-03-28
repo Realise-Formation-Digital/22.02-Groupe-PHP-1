@@ -36,6 +36,6 @@ class monstre {
     
 }
     
-echo"ciao a tutti";
+echo"ciao lamine";
 new Monstre();
 
