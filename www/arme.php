@@ -1,6 +1,6 @@
 <?php
 //classe arm
-class Arm {
+class Arme {
     private $_nom;
     private $_force;
     private $_endurance;
@@ -13,6 +13,14 @@ class Arm {
         $this->_endurance = rand(1,50);
         $this->_prix = rand(1,50);
         
+    }
+
+    public function getInfoArme() {
+        return "$this->_nom (Force: $this->_force - Endurance: $this->_endurance)";
+    }
+
+    public function getEndurance() {
+        return $this->_endurance;
     }
 
 }

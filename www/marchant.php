@@ -1,5 +1,5 @@
 <?php
-class marchant {
+class Marchant {
     private $_exp;
     private $_arme;
 
