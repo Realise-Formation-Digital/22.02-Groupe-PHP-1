@@ -12,8 +12,11 @@ if (isset($_POST["start"])) {
 }
 
 if (isset($_POST["attaque"])) {
-    echo "gogo";
-    //$game->combat('attaquer');
+    // combat($monstre, $arme); //fonction combat du héro
+    // fight(); //fonction fight monstre
+    //combat($mode); //fonction combat jeu
+        echo "gogo";
+
 }
 
 if (isset($_POST["fuire"])) {

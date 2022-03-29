@@ -37,7 +37,7 @@ class Game{
  //Gagner
     public function combat($mode) {
 
-        echo "er jeux combat";
+        echo "erje veux me battre jeux combat";
         if ($mode = 'attaquer') {
             $gagner = $this->_hero->attaque($this->_monstre);
         }if ($gagner) {
@@ -45,7 +45,7 @@ class Game{
             } else {
                 $this->_monstre = new Monstre();
             }
-        
+        return $this->_gagner;
         }
 //Perdue        
     public function fuire($mode){
