@@ -34,11 +34,11 @@
 
         
         <div class="form-floating ">
-            <input type="texte" class="form-control" id="experience" placeholder="commence à 10 points" name="experience" disabled value="<?php echo 'ciao' ?>">
+            <input type="texte" class="form-control" id="experience" placeholder="commence à 10 points" name="experience" disabled value="<?php echo $game->getHero()->getExp() ?>">
             <label for="floatingInput">Point d'expérience</label>
         </div>
         <div class="form-floating ">
-            <input type="texte" class="form-control" id="vie" placeholder="commence à 10 points" name="vie" disabled value="<?php echo 'ciao vie' ?>">
+            <input type="texte" class="form-control" id="vie" placeholder="commence à 10 points" name="vie" disabled value="<?php echo $game->getHero()->getVie() ?>">
             <label for="floatingInput">Point de vie</label>
         </div>
         <div class="form-floating ">
