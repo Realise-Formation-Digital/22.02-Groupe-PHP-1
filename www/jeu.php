@@ -1,8 +1,9 @@
 <?php
-    /*include "hero.php";
-      include "marchant.php";
+    include "hero.php";
+    /*  include "marchant.php";*/
       include "monstre.php";
-    */
+      include "arme.php";
+    
 class Game{
     private $_hero;
     private $_monstre;
@@ -11,9 +12,9 @@ class Game{
 
     public function __construct() {
         $this->_hero = new Hero();
-        $this->_monstre = new Monstre();
-        $this->_arme = new Arme();
-        $this->_marchant = new Marchant();
+        $this->_monstre = new Monstre($this->_hero);
+
+        //$this->_marchant = new Marchant();
     }
 
     public function getHero() {
@@ -24,23 +25,27 @@ class Game{
         return $this->_monstre;
     }
 
-    public function getMarchant() {
-        return $this->_marchant;
-    }
+    // public function getMarchant() {
+    //     return $this->_marchant;
+    // }
 
     public function getArme() {
         return $this->_arme;
     }
+
  //Calcule des points
  //Gagner
     public function combat($mode) {
+
+        echo "er jeux combat";
         if ($mode = 'attaquer') {
-            $gagner = $this->_hero->attaque($this->_monster);
+            $gagner = $this->_hero->attaque($this->_monstre);
         }if ($gagner) {
                 $this->_monstre = new Monstre();
             } else {
                 $this->_monstre = new Monstre();
             }
+        
         }
 //Perdue        
     public function fuire($mode){
@@ -52,5 +57,7 @@ class Game{
             }
         }
     }
+
+    echo"se jeu combat";
 ?>
 

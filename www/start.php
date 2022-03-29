@@ -2,6 +2,7 @@
 
       include "isset.php";
     
+      //require "monstre.php"
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +28,7 @@
             </div>
         </div>
     </div>
-    
+    <!-- Hero -->
     <form class="row" action="start.php" method="POST">
         <div class="col-2">
 
@@ -67,7 +68,7 @@
     <!--monstre-->
     <div class="col-2">
     <div class="form-floating ">
-            <input type="texte" class="form-control" id="experience" placeholder="commence à 10 points" name="experience" disabled value="<?php echo 'ciao' ?>">
+            <input type="texte" class="form-control" id="experience" placeholder="commence à 10 points" name="experience" disabled value="<?php echo '$_exp' ?>">
             <label for="floatingInput">Point d'expérience monstre</label>
         </div>
         <div class="form-floating ">
@@ -83,11 +84,12 @@
             <label for="floatingInput">Point d'endurance</label>
         </div>
         <div class="form-floating">
-            <input type="texte" class="form-control" id="arme" placeholder="commence à 1 arme" name="arme" disabled value="<?php echo 'ciao arme' ?>">
+            <input type="texte" class="form-control" id="arme" placeholder="commence à 1 arme" name="arme" disabled value="<?php echo $game->getMonstre()->getArme()->getEndurance() ?>">
             <label for="floatingInput">Point d'endurance arme</label>
         </div>
+
         <div class="form-floating">
-            <input type="texte" class="form-control" id="sous" placeholder="commence à 20€" name="sous" disabled value="<?php echo 'ciao sous' ?>">
+            <input type="texte" class="form-control" id="sous" placeholder="commence à 20€" name="sous" disabled value="<?php echo $game->getMonstre()->getSous() ?>">
             <label for="floatingInput">Monstre sous </label>
         </div>
        
