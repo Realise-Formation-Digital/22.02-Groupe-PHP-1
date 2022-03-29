@@ -29,11 +29,11 @@ class Personnage {
                 $this->experience++; 
             } else { $this->arme++;
                 //Héro perd 1 PV
-            if  $this<-$monstre 
+            if  $monstre->force > $this->force) {
                 $this<-$vie--;
-                
             }
             //Tester si le héros a tjs des PV ou arrêter le combat par un game over et retourner une valeur "Game Over", "Fin", "False", 0
+
             //Si le héors à tjs des PV passer au combat suivant et retourner un valeur p.ex. : "Victoire", "Vrai", "Gagné", 1               
     }
 
