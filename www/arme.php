@@ -1,10 +1,6 @@
 <?php
 //classe arm
-<<<<<<< Updated upstream:www/arme.php
 class Arme {
-=======
-class Arme{
->>>>>>> Stashed changes:www/Arm.php
     private $_nom;
     private $_force;
     private $_endurance;
