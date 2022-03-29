@@ -23,7 +23,7 @@ class Hero {
     /*
      * Méthode de combat
      */
-    public function __combat($monstre, $vie, $arme){
+    public function __combat($monstre, $arme){
             if ($this->_force > $monstre->$endurance){
                 //Gagne 1 expérience + une arme
                 $this->_experience++;
@@ -50,6 +50,8 @@ class Hero {
     function getArme (){
         return $this->_arme;
     }
-
+    public function getVie() {
+        return $this->vie;
+    }
 }
   
