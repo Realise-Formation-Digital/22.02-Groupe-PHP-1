@@ -58,6 +58,6 @@ class Game{
         }
     }
 
-    echo"se jeu combat";
+    //echo"Le mode ne passe pas";
 ?>
 
