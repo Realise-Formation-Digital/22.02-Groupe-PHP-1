@@ -2,10 +2,10 @@
     // include "arme.php";
 class Monstre {
     //proprieté 
-    private $_exp;
+    private $_exp; //expérience
     private $_endurance;//stamina
     private $_force;//strenght;
-    private $_arme;
+    private $_arme; //arme
     private $_sous;//money;
 
     //constructor
