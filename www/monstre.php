@@ -9,6 +9,7 @@ class Monstre {
     private $_sous;//money;
 
     //constructor
+    
     public function __construct($hero) {
         // if ($_exp) {
         //     $this->_exp = $_exp;

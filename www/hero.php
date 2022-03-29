@@ -18,7 +18,9 @@ class Hero {
         $this->_experience = 0;                 // Intialisation de l'expérience à 1
         $this->_vie = 10;                   //vie commence à 10pts(à voir si ça commence vraiment à 10)
         $this->_endurance = 1;                   //endurance commence à 1pts
+        $this->_sous = 20;
     }
+
 
     /*
      * Méthode de combat
@@ -41,17 +43,25 @@ class Hero {
     public function getExp() {
         return $this->_experience;
     }
+    public function getEndurance(){
+        return $this->_endurance;
+    }
+    public function getForce(){
+        return $this->_force;
+    }
+    public function getSous(){
+        return $this->_sous;
+    }
+    public function getVie(){
+        return $this->_vie;
+    }
+    function getArme (){
+        return $this->_arme;
+    }
 
     // Methode de gestion de l'expérience du personnage
     public function gagnerExperience() {
         $this->_experience ++;  // Incrémente l'expérience
-    }
-
-    function getArme (){
-        return $this->_arme;
-    }
-    public function getVie() {
-        return $this->vie;
     }
 }
   
