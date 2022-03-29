@@ -3,7 +3,7 @@
     /*  include "marchant.php";*/
       include "monstre.php";
       include "arme.php";
-    
+//personnages 
 class Game{
     private $_hero;
     private $_monstre;
