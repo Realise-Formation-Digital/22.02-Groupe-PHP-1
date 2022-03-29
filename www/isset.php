@@ -19,7 +19,7 @@ if (isset($_POST["attaque"])) {
 
 }
 if (isset($_POST["fuire"])) {
-    echo "bye";
+    echo "Un combat évité est un combat gagné \"Bruce LEE\"";
 }
 
 
