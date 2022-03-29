@@ -5,157 +5,46 @@ class Personnage {
      */
     private $_experience;           // La force du personnage
     private $_endurance;    // Son endurance
-    private $_santé;      // Ses points de vies
-    private $_degats;          // Ses dégâts
+    private $_vie;      // Ses points de vies
+    private $_force;          // Ses dégâts
     private $_sous;       // son argent
-    
-    /*
-     * Attributs / Variables statiques
-     */
-    private static $_leTexte = '<strong>Attribut statique :</strong> Je suis à ta rescousse !!!<br>';
-
-    /*
-     * Déclaration des constantes de Force
-     */
-    const FORCE_PETITE  = 20;
-    const FORCE_MOYENNE = 50;
-    const FORCE_GRANDE  = 80;
-    
+    private $_arme;       //son arme
     /*
      * Méthode de construction
      */
-    public function __construct($forceInitiale, $degats) {
+    public function __construct($force, $vie, $endurance, $sous) {
         //echo 'Voici le constructeur !';       // Message de test
-        $this->setForce($forceInitiale);        // Initialisation de la force
-        $this->setDegats($degats);              // Initialisation des dégats
-        $this->_experience = 1;                 // Intialisation de l'expérience à 1
+        $this->_force = 1;       // Initialisation de la force
+        $this->_experience = 0;                 // Intialisation de l'expérience à 1
+        $this->_vie = 10;                   //vie commence à 10pts(à voir si ça commence vraiment à 10)
+        $this->_endurance = 1;                   //endurance commence à 1pts
     }
-
 
     /*
-     * Methodes
+     * Méthode de combat
      */
-    // Simple méthode test affichage texte
-    //public function parler() {
-    //    echo 'Je suis le personnage 1 <br> La force est avec moi !<br>';
-    //}
-    
-    // Méthode de gestion du déplacement du personnage
-    public function deplacer() {
-         
+    public function __combat($monstre, $vie, $arme){
+            if ($this->force > $monstre->force){
+                //Gagne 1 expérience + une arme
+                $this->experience++; 
+            } else { $this->arme++;
+                //Héro perd 1 PV
+            if  $this<-$monstre 
+                $this<-$vie--;
+                
+            }
+            //Tester si le héros a tjs des PV ou arrêter le combat par un game over et retourner une valeur "Game Over", "Fin", "False", 0
+            //Si le héors à tjs des PV passer au combat suivant et retourner un valeur p.ex. : "Victoire", "Vrai", "Gagné", 1               
     }
-    
-    // Méthode de gestion de la frappe selon la force du personnage
-    public function frapper(Personnage $persoAFrapper) {
-        $persoAFrapper->_degats += $this->_force;
+
+    public function getarme() {
+            if ($this->hero
+            }
     }
-    
+
     // Methode de gestion de l'expérience du personnage
     public function gagnerExperience() {
         $this->_experience ++;  // Incrémente l'expérience
     }
     
-    
-    /*
-     * Méthodes Accesseurs (Getters) - Pour récupérer la valeur d'un attribut
-     */
-    // Methode force() qui renvoie le contenu de l'attributs $_force
-    public function force() {
-        return $this->_force; 
-    }
-    
-    // Methode experience() qui renvoie le contenu de l'attribut $_ecperience
-    public function experience() {
-        return $this->_experience;
-    }
-    
-    // Methode degats() qui renvoie le contenu de l'attribut $_degats
-    public function degats() {
-        return $this->_degats;
-    }
-    
-    
-    /*
-     * Méthodes Mutateurs - Pour modifier la valeur des attributs
-     */
-    // Mutateur qui modifie l'attribut $_force
-    public  function setForce($force) {
-//        if (!is_int($force)) { // S'il ne s'agit pas d'un nombre entier.
-//            trigger_error('La force d\'un personnage doit être un nombre entier', E_USER_WARNING);
-//            return;
-//        }
-//
-//        if ($force > 100) { // On vérifie bien qu'on ne souhaite pas assigner une valeur supérieure à 100.
-//            trigger_error('La force d\'un personnage ne peut dépasser 100', E_USER_WARNING);
-//            return;
-//        }
-//        
-//        $this->_force = $force;
-        
-        if (in_array($force, [self::FORCE_PETITE, self::FORCE_MOYENNE, self::FORCE_GRANDE])) {
-            $this->_force = $force;
-        }
-    }
-    
-    // Mutateur chargé de modifier l'attribut $_experience.
-    public function setExperience($experience) {
-        if (!is_int($experience)) { // S'il ne s'agit pas d'un nombre entier.
-            trigger_error('L\'expérience d\'un personnage doit être un nombre entier', E_USER_WARNING);
-            return;
-        }
-
-        if ($experience > 100) { // On vérifie bien qu'on ne souhaite pas assigner une valeur supérieure à 100.
-            trigger_error('L\'expérience d\'un personnage ne peut dépasser 100', E_USER_WARNING);
-            return;
-        }
-
-        $this->_experience = $experience;
-    }
-    
-    public function setDegats($degats) {
-        if (!is_int($degats)) { // S'il ne s'agit pas d'un nombre entier.
-            trigger_error('Le niveau de dégâts d\'un personnage doit être un nombre entier', E_USER_WARNING);
-            return;
-        }
-
-        $this->_degats = $degats;
-    }
-    
-    
-    /*
-     * Méthodes statiques - Pour agir sur une classe et non sur un objet
-     */
-    public static function parler() {
-        //echo '<strong>Méthode staitique :</strong> Je suis ton père !!!<br>';
-        echo self::$_leTexte; // Appel de l'attribut statique
-    }
-}
-
-
-/*
- * Héritage
- */
-class Monstre extends Personnage {
-    private $_magie; // Puissance de sort de magie sur 100
-    
-    public function lancerUnSort($perso) {
-        $perso->recevoirDegats($this->_magie);
-    }
-    
-    //Redéfinir la méthode gagnerExperience
-    public function gagnerExperience() {
-        parent::gagnerExperience(); // appel de la methode gagnerExperience() de la classe parente
-        
-        if ($this->_magie < 100) {
-            $this->_magie += 10;
-        }
-    }
-}
-
-class Arme extends Personnage {
-    
-}
-
-//class mode de jeu extends Personnage {
-    
-}
+  
