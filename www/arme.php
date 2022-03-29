@@ -23,6 +23,9 @@ class Arme {
         return $this->_endurance;
     }
 
+    public function getForce(){
+        return $this->_force;
+    }
 }
 ?>
      

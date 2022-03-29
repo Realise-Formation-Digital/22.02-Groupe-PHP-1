@@ -68,19 +68,19 @@
     <!--monstre-->
     <div class="col-2">
     <div class="form-floating ">
-            <input type="texte" class="form-control" id="experience" placeholder="commence à 10 points" name="experience" disabled value="<?php echo '$_exp' ?>">
+            <input type="texte" class="form-control" id="experience" placeholder="commence à 10 points" name="experience" disabled value="<?php echo $game->getMonstre()->getExp() ?>">
             <label for="floatingInput">Point d'expérience monstre</label>
         </div>
         <div class="form-floating ">
-            <input type="texte" class="form-control" id="vie" placeholder="commence à 10 points" name="vie" disabled value="<?php echo 'ciao vie' ?>">
+            <input type="texte" class="form-control" id="vie" placeholder="commence à 10 points" name="vie" disabled value="<?php echo $game->getMonstre()->getForce() ?>">
             <label for="floatingInput">Point de force</label>
         </div>
         <div class="form-floating">
-            <input type="texte" class="form-control" id="force" placeholder="commence à 1 points (2 si arme)" name="force" disabled value="<?php echo 'ciao force' ?>">
+            <input type="texte" class="form-control" id="force" placeholder="commence à 1 points (2 si arme)" name="force" disabled value="<?php echo $game->getMonstre()->getArme()->getForce() ?>">
             <label for="floatingInput">Point de force arme</label>
         </div>   
         <div class="form-floating">
-            <input type="texte" class="form-control" id="endurance" placeholder="commence à 10 points" name="endurance" disabled value="<?php echo 'ciao endu' ?>">
+            <input type="texte" class="form-control" id="endurance" placeholder="commence à 10 points" name="endurance" disabled value="<?php echo $game->getMonstre()->getEndurance() ?>">
             <label for="floatingInput">Point d'endurance</label>
         </div>
         <div class="form-floating">
