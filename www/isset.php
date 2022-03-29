@@ -18,7 +18,6 @@ if (isset($_POST["attaque"])) {
         echo "gogo";
 
 }
-
 if (isset($_POST["fuire"])) {
     echo "bye";
 }
