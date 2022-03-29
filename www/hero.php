@@ -19,26 +19,9 @@ class Hero {
         $this->_vie = 10;                   //vie commence à 10pts(à voir si ça commence vraiment à 10)
         $this->_endurance = 1;                   //endurance commence à 1pts
         $this->_sous = 20;
+        $this->_arme = 1;
     }
 
-
-    /*
-     * Méthode de combat
-     */
-    public function combat($monstre, $arme){
-            if ($this->_force > $monstre->$endurance){
-                //Gagne 1 expérience + une arme
-                $this->_experience++;
-                $this->_arme++;
-                $this->_sous + $_monstre->$_sous;
-            } else { 
-                //Héro perd 1 PV
-                $this->_vie--;
-            }
-            //Tester si le héros a tjs des PV ou arrêter le combat par un game over et retourner une valeur "Game Over", "Fin", "False", 0
-
-            //Si le héors à tjs des PV passer au combat suivant et retourner un valeur p.ex. : "Victoire", "Vrai", "Gagné", 1               
-    }
 
     public function getExp() {
         return $this->_experience;
@@ -58,6 +41,23 @@ class Hero {
     function getArme (){
         return $this->_arme;
     }
+     /*
+     * Méthode de combat
+     */
+    public function __combat(){
+        if ($this->_force > $monstre->$endurance){
+            //Gagne 1 expérience + une arme
+            $this->_experience++;
+            $this->_arme++;
+            $this->_sous + $_monstre->$_sous;
+        } else { 
+            //Héro perd 1 PV
+            $this->_vie--;
+        }
+        //Tester si le héros a tjs des PV ou arrêter le combat par un game over et retourner une valeur "Game Over", "Fin", "False", 0
+
+        //Si le héors à tjs des PV passer au combat suivant et retourner un valeur p.ex. : "Victoire", "Vrai", "Gagné", 1               
+}
 
     // Methode de gestion de l'expérience du personnage
     public function gagnerExperience() {
