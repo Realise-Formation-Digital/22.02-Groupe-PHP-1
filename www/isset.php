@@ -6,7 +6,7 @@ $game = null;
 if (isset($_POST["start"])) {
 
     //$start = $_POST["start"];
-    echo "ciao";
+
     // $exp = $_POST["experience"];
     $game = new Game();
 }
@@ -15,8 +15,14 @@ if (isset($_POST["attaque"])) {
     // combat($monstre, $arme); //fonction combat du héro
     // fight(); //fonction fight monstre
     //combat($mode); //fonction combat jeu
-        echo "gogo";
-
+        echo "La violence c'est pour les null";
+         function tarace($a,$b){
+            if ($a < $b){
+                return 1;
+            }else{
+                return 0;
+            }
+         }
 }
 if (isset($_POST["fuire"])) {
     echo "Un combat évité est un combat gagné \"Bruce LEE\"";
