@@ -16,16 +16,10 @@ if (isset($_POST["attaque"])) {
     // fight(); //fonction fight monstre
     //combat($mode); //fonction combat jeu
         echo "La violence c'est pour les null";
-         function tarace($a,$b){
-            if ($a < $b){
-                return 1;
-            }else{
-                return 0;
-            }
-         }
 }
+
 if (isset($_POST["fuire"])) {
-    echo "Un combat évité est un combat gagné \"Bruce LEE\"";
+    echo "\"Un combat évité est un combat gagné\" Bruce LEE";
 }
 
 
