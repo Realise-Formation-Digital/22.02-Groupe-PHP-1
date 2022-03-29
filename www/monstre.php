@@ -23,7 +23,7 @@ class Monstre {
         $this->_arme = $armes[rand(0,2)];
         $this->_sous = rand(1,50);
     }
-
+    //possède de l'argent
     function getSous (){
         return $this->_sous;
     }
@@ -47,10 +47,12 @@ class Monstre {
     }
     //fight function 
     function fight(){ 
+        // si le monstre gagne le combat
         if($this->endurance > $hero->force) {
             $gagner = $_monstre > $_hero;
         
         }
+        // si le monstre perd le combat
         elseif($this->endurance < $hero->force){
             $gagner = $_monstre < $_hero;
         }
