@@ -63,9 +63,6 @@ class Monstre {
     }
     
 }
- function test(){
-     echo "une chaine de characete";
- }
 //$_monstre = new Monstre((rand(1,50) - 5), rand(1,50), rand(1,50), 1, rand(1,50));
 
 // class Hero {
