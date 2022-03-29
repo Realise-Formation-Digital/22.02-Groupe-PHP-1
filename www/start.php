@@ -34,27 +34,27 @@
 
         
         <div class="form-floating ">
-            <input type="texte" class="form-control" id="experience" placeholder="commence à 10 points" name="experience" disabled value="<?php echo 'ciao' ?>">
+            <input type="texte" class="form-control" id="experience" placeholder="commence à 10 points" name="experience" disabled value="<?php echo $game->getHero()->getExp() ?>">
             <label for="floatingInput">Point d'expérience</label>
         </div>
         <div class="form-floating ">
-            <input type="texte" class="form-control" id="vie" placeholder="commence à 10 points" name="vie" disabled value="<?php echo 'ciao vie' ?>">
+            <input type="texte" class="form-control" id="vie" placeholder="commence à 10 points" name="vie" disabled value="<?php echo $game->getHero()->getVie() ?>">
             <label for="floatingInput">Point de vie</label>
         </div>
         <div class="form-floating ">
-            <input type="texte" class="form-control" id="force" placeholder="commence à 1 points (2 si arme)" name="force" disabled value="<?php echo 'ciao force' ?>">
+            <input type="texte" class="form-control" id="force" placeholder="commence à 1 points (2 si arme)" name="force" disabled value="<?php echo $game->getHero()->getForce() ?>">
             <label for="floatingInput">Point de force</label>
         </div>   
         <div class="form-floating ">
-            <input type="texte" class="form-control" id="endurance" placeholder="commence à 10 points" name="endurance" disabled value="<?php echo 'ciao endu' ?>">
+            <input type="texte" class="form-control" id="endurance" placeholder="commence à 10 points" name="endurance" disabled value="<?php echo $game->getHero()->getEndurance() ?>">
             <label for="floatingInput">Point d'endurance</label>
         </div>
         <div class="form-floating ">
-            <input type="texte" class="form-control" id="arme" placeholder="commence à 1 arme" name="arme" disabled value="<?php echo 'ciao arme' ?>">
+            <input type="texte" class="form-control" id="arme" placeholder="commence à 1 arme" name="arme" disabled value="<?php echo $game->getHero()->getArme() ?>">
             <label for="floatingInput">Armes</label>
         </div>
         <div class="form-floating ">
-            <input type="texte" class="form-control" id="sous" placeholder="commence à 20€" name="sous" disabled value="<?php echo 'ciao sous' ?>">
+            <input type="texte" class="form-control" id="sous" placeholder="commence à 20€" name="sous" disabled value="<?php echo $game->getHero()->getSous() ?>">
             <label for="floatingInput">Sous</label>
         </div>
                 <button type="submit" class=" btn btn btn-outline-primary btn-lg" name="attaque">
